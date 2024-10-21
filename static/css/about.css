@@ -1,0 +1,282 @@
+/* BANNER */
+
+.banner {
+    background: url('../images/banner_about.jpg') no-repeat center center;
+    background-size: cover;
+}
+.banner {
+    text-align: left; /* Metinleri sola hizala */
+    color: white;
+    padding: 200px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: white;
+    text-align: left; /* Ana başlığı sola hizala */
+}
+
+.banner p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: white;
+    text-align: left; /* Açıklama metnini sola hizala */
+}
+
+/* About */
+
+.about-content {
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0); /* Şeffaf  arka plan */
+}
+
+.about-content h2 {
+    color: #1f8cad;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #444;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* introduction */
+
+.introduction {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    gap: 20px; /* Görsel ile metin arasında boşluk */
+}
+
+.intro-content {
+    flex: 1;
+    text-align: left;
+}
+
+.intro-content h2 {
+    font-size: 2.5em;
+    color: #1f8cad;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Büyük harflerle dikkat çekici hale getirme */
+}
+
+.intro-content p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 600px;
+}
+
+/* Kapsayıcı div'e uygulanacak stil */
+.intro-image {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px; /* Görsel ile diğer içerik arasında boşluk bırakmak için */
+}
+
+/* Resmin boyutunu kontrol eden stil */
+.intro-image img {
+    width: 200px; /* Görselin genişliği */
+    height: auto; /* Yükseklik orantılı olarak ayarlanır */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    transition: transform 0.3s ease; /* Görsel hover efekti */
+}
+
+/* Hover sırasında görselin büyüme efekti */
+.intro-image img:hover {
+    transform: scale(1.05); /* Hover sırasında %5 büyüme */
+}
+
+/* Animasyon için başlangıç stilini tanımlar */
+.fade-in-section {
+    opacity: 0;
+    transform: translateX(-50px); /* Başlangıçta soldan 50px uzaklıkta olacak */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.show {
+    opacity: 1;
+    transform: translateX(0); /* Normal pozisyonuna geri döner */
+}
+
+/* Vision - Mission */
+
+.vision-mission, .our-story, .our-team, .values, .support-us {
+    margin-bottom: 40px;
+}
+
+.vision, .mission {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* OUR-STORY */
+
+.our-story, .values {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* TEAM MEMBER */ 
+
+.meet-the-team {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    opacity: 0; /* Başlangıçta görünmez */
+    transform: translateY(20px); /* Başlangıçta biraz aşağıda */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Yumuşak geçiş */
+}
+
+.team-member.visible {
+    opacity: 1; /* Görünür hale gelir */
+    transform: translateY(0); /* Normal konuma gelir */
+}
+
+.team-member:hover {
+    transform: translateY(-10px); /* Üzerine gelindiğinde hafifçe yukarı çıkar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gölgeler derinleşir */
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover; /* Görüntünün içeriğe sığmasını sağlar */
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    color: #243254;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #666;
+    margin: 5px 0;
+}
+
+.bio {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info a {
+    display: inline-block;
+    text-decoration: none;
+    color: #1f8cad;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #33C1FF; /* Üzerine gelindiğinde renk değişir */
+}
+
+/* Values */
+
+.values ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+
+.values li {
+    background-color: #1f8cad;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* DONAte */
+
+.support-us {
+    background: linear-gradient(135deg, #76daf6, #00c6ff); /* Canlı bir geçiş efekti ekleyin */
+    color: #ffffff; /* Yazı rengini beyaz yaparak kontrastı artırın */
+    padding: 20px 5px;
+    text-align: center;
+    border-radius: 15px; /* Köşeleri yuvarlatın */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Daha derin bir gölge ekleyin */
+}
+.support-us h2 {
+    font-size: 2.5em; /* Başlığı büyütün */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgb(250, 250, 250); /* Hafif gölge efekti */
+}
+
+.support-us p {
+    font-size: 1.2em; /* Yazı boyutunu büyütün */
+    max-width: 800px; /* Metni sınırlandırarak daha dar bir alanda toplanmasını sağlayın */
+    margin: 0 auto 20px; /* Ortalanmış ve altına boşluk bırakılmış metin */
+    text-shadow: 1px 1px 2px rgb(255, 255, 255); /* Hafif bir gölge ile okunabilirliği artırın */
+}
+
+.support-us .donate-btn {
+    background: #243254;
+    padding: 12px 24px; /* Buton boyutunu büyütün */
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover için geçiş efektleri ekleyin */
+
+}
+
+.support-us .donate-btn:hover {
+    background: #02ffd9; /* Üzerine gelindiğinde buton rengini değiştirin */
+    transform: scale(1.05); /* Butonu hafifçe büyütün */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Hover sırasında gölge ekleyin */
+
+}
+
+.support-us.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

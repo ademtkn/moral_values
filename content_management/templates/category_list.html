@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Educational Platform</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css1/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/category.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/"><img src="{% static 'images/logo_1.png' %}" alt="Moral Values Logo"></a>
+        </div>
+        <nav>
+            <!--  Sol Menüler -->
+            <ul class="left-menu">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'category_list' %}">Categories</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact</a></li>
+            </ul>
+
+             <!-- Sağ Menü (Giriş Kayıt) -->
+            <ul class="right-menu">
+            <li><a href="#" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>Welcome to Moral Values</h1>
+        <p>Your source for character education resources.</p>
+    </section>
+   
+    <!-- Main Content -->
+    <main>
+         <!-- Categories Section -->
+         <section class="categories-section">
+            <h1>Schools</h1>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="card-image">
+                        <img src="{% static 'images/kindergarten.jpg' %}" alt="Kindergarten">
+                    </div>
+                    <h3>Kindergarten</h3>
+                    <p>Explore fun and engaging content for young learners.</p>
+                    <a href="#" class="view-more-btn">View More</a>
+                </div>
+                <div class="category-card">
+                    <div class="card-image">
+                        <img src="{% static 'images/elementary.jpg' %}" alt="Elementary School">
+                    </div>
+                    <h3>Elementary School</h3>
+                    <p>Interactive content for grades 1-4.</p>
+                    <a href="#" class="view-more-btn">View More</a>
+                </div>
+                <div class="category-card">
+                    <div class="card-image">
+                        <img src="{% static 'images/secondary.jpg' %}" alt="Secondary School">
+                    </div>
+                    <h3>Secondary School</h3>
+                    <p>Engaging resources for grades 5-8.</p>
+                    <a href="#" class="view-more-btn">View More</a>
+                </div>
+                <div class="category-card">
+                    <div class="card-image">
+                        <img src="{% static 'images/highschool.jpg' %}" alt="High School">
+                    </div>
+                    <h3>High School</h3>
+                    <p>Advanced content for grades 9-12.</p>
+                    <a href="#" class="view-more-btn">View More</a>
+                </div>
+            </div>
+        </section>
+        
+        
+                <!-- Follow Us Section -->  
+                <section class="follow-us-section">
+                    <span class="follow-us-text">Follow Us</span>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                        <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram Icon">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                        <img src="{% static 'images/youtube-icon.png' %}" alt="YouTube Icon">
+                    </a>
+                    <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                        <img src="{% static 'images/tiktok-icon.png' %}" alt="TikTok Icon">
+                    </a>
+                </section>
+    </main>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
+        <img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp">
+    </a>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Moral Values</h3> <!-- Başlık -->
+                <ul class="footer-links">
+                    <li><a href="/terms-of-use/">Terms of use</a></li>
+                    <li><a href="/privacy-policy/">Privacy policy</a></li>
+                    <li><a href="/about-us/">About us</a></li>
+                    <li><a href="/contact-us/">Contact us</a></li>
+                </ul>
+                <p>© 2024 Moral Values. All rights reserved.</p> <!-- Alt satır -->
+            </div>
+        </footer>
+    
+        <script>
+            // Sayfa yüklendiğinde çalışacak fonksiyon
+            window.onscroll = function() {
+                var header = document.querySelector("header");
+                if (window.pageYOffset > 50) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            };
+        </script>
+
+        <script src="{% static 'js/animations.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+.banner {
+    background: url('../images/banner.jpg') no-repeat center center;
+    background-size: cover;
+    
+    color: white;
+    padding: 200px 20px;
+    background-position: center;
+    text-align: left; /* Metinleri sola hizala */
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: white;
+    text-align: left; /* Ana başlığı sola hizala */
+}
+
+.banner p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: white;
+    text-align: left; /* Açıklama metnini sola hizala */
+}
+
+/* FUTURES SECTION*/
+
+section.features-section {
+    margin-top: -40px; /* Banner ile features section arasındaki boşluğu azaltıyoruz */
+}
+/* Features Section */
+.features-section {
+    display: flex;
+    justify-content: space-around;  /* Öğeler arasındaki boşluğu dengeleyelim */
+    align-items: center;  /* Dikeyde ortalayalım */
+    background-color: rgba(26, 81, 111, 0); /* Arka plan rengi %40 transparan */
+    padding: 40px 20;
+    border-radius: 10px;  /* Yuvarlatılmış köşeler */
+    flex-wrap: nowrap;  /* Öğelerin yan yana olmasını sağlayalım */
+    max-width: 1080px; /* Genişliği sınırla */
+    margin: 0 auto; /* Ortalamak için */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.feature {
+    text-align: center;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    color: #243254;
+    margin-bottom: 10px;
+}
+
+.count {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #1f8cad;
+    transition: color 0.3s ease;
+}
+
+.feature:hover .count {
+    color: #33C1FF;
+}
+
+.feature-item {
+    text-align: center;
+    flex: 1;
+    max-width: 200px;
+    margin: 0 10px;
+    padding: 10px 0;
+    background-color: rgba(205, 231, 245, 0.9); /* Arka plan rengi %40 transparan */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Kabarık görünüm için gölge */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover efekti için yumuşak geçiş */
+}
+
+/* Hover olduğunda kabarık görünümü artırma */
+.feature-item:hover {
+    transform: translateY(-10px); /* Öğeyi yukarı kaldırma efekti */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Gölgeyi artırarak kabarık görünüm */
+}
+.feature-icon i {
+    font-size: 40px; /* İkonların boyutu */
+    margin-bottom: 10px; /* İkon ile başlık arasında boşluk */
+    display: block; /* Ortalamak için blok seviyesi yap */
+    text-align: center; /* İkonu ortala */
+}
+
+.feature-icon .material-icons {
+    font-size: 40px; /* İkonların boyutu */
+    margin-bottom: 10px; /* İkon ile başlık arasında boşluk */
+    display: block; /* Ortalamak için blok seviyesi yap */
+    text-align: center; /* İkonu ortala */
+}
+
+.feature-item h3 {
+    font-size: 1.2em;
+    color: #2a3b57;  /* Başlıklar için logo rengi */
+    margin-bottom: 8px;
+}
+
+.feature-item p {
+    font-size: 0.8em;
+    color: #666;  /* Açıklama metni rengi */
+}
+
+/* FEATURED CONTENT AYARLARI */
+
+/* Featured Content arka plan ayarları */
+.featured-content {
+    background-color: rgba(0, 0, 0, 0); /* Tamamen şeffaf arka plan */
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-top: 0;
+}
+
+/* Featured Content öğeleri ayarları */
+.featured-content .content-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Her klasör için %50 transparan arka plan ve boyut ayarları */
+.featured-content .content-item {
+    width: 318pt; /* Genişlik */
+    height: 300pt; /* Yükseklik */
+    background-color: rgba(83, 156, 179, 0.9); /* %50 şeffaflık ve canlı renk */
+    padding: 20px;
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hafif gölge ile kabarık efekt */
+    margin: 10px; /* Kutular arasında boşluk */
+    text-align: center; /* İçeriği ortala */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Klasör hover efekti - kutular üzerine gelince daha kabarık görünüm */
+.featured-content .content-item:hover {
+    transform: translateY(-10px); /* Yukarı kaldırma efekti */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Gölgeyi artırarak kabarık görünüm */
+}
+
+.featured-content .content-item img {
+    width: 80px; /* Görsellerin genişliğini ayarla */
+    height: auto;
+    margin-bottom: 4px;
+}
+
+/* İçerik içindeki yazılar ve linkler */
+.featured-content .content-item p, .featured-content .content-item a {
+    color: white; /* Yazılar ve linkler için beyaz renk */
+}
+
+/* Klasör hover efekti - kutular üzerine gelince daha kabarık görünüm */
+.featured-content .content-item:hover {
+    transform: translateY(-10px); /* Yukarı kaldırma efekti */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Gölgeyi artırarak kabarık görünüm */
+}
+
+/* Featured resimlerin boyutlarını kontrol etmek için */
+.featured-image {
+    width: 75px;  /* Genişliği 75px yapıyoruz */
+    height: auto;  /* Yükseklik genişliğe göre orantılı ayarlanacak */
+    display: block;
+    margin: 0 auto; /* Ortalamak için */
+    object-fit: cover;  /* Resimlerin düzgün görünmesi için */
+}
+
+/* Story of the Week, Video of the Week, Game of the Week bölümleri */
+.story-of-the-week, .video-of-the-week, .game-of-the-week {
+    width: 100%;
+    background-color: #1f8cad;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    min-height: 400px; /* Yüksekliği minimum 400px yapar */
+    box-sizing: border-box; /* Padding'i dahil ederek genişlik ve yüksekliği hesaplar */
+}
+
+.story-of-the-week h3, .video-of-the-week h3, .game-of-the-week h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Story of the Week, Video of the Week, Game of the Week Başlık Stili */
+.story-of-the-week h3, .video-of-the-week h3, .game-of-the-week h3 {
+    background-color: #3854F9; /* Arka plan rengi */
+    color: white; /* Yazı rengi beyaz */
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em; /* Başlık yazı boyutu */
+    border-radius: 8px; /* Hafif yuvarlatılmış köşeler */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); /* İçe doğru gölge efekti (baskı efekti) */
+    display: inline-block; /* Başlığı dikdörtgen şeklinde ayarlar */
+    width: flex; /* Genişliği tam yapar */
+    box-sizing: border-box; /* Padding ve genişlik hesaplamasını düzeltir */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Yazıya hafif gölge efekti */
+}
+
+.story-of-the-week .icon, .video-of-the-week .icon, .game-of-the-week .icon {
+    display: block;
+    margin: 0 auto 10px auto;
+    font-size: 50px;
+}
+
+/* Video dikdörtgen olacak, çember yapılmayacak */
+.video-of-the-week .video-container {
+    display: inline-block;
+    width: 100%; /* Videonun genişliğini tam yapar */
+    height: auto; /* Yüksekliği videoya göre ayarlar */
+    border-radius: 0; /* Köşeleri yuvarlamaz, dikdörtgen kalır */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge ekler */
+}
+
+.video-of-the-week video {
+    width: 100%; /* Video genişliği tam olarak sığar */
+    height: auto; /* Yükseklik genişliğe göre orantılı ayarlanır */
+}
+
+.video-container {
+    width: 100%; /* Kapsayıcının genişliğini %100 yap */
+    max-width: 300px; /* Videonun genişliğini sınırla */
+    height: auto; /* Yükseklik genişliğiyle orantılı olacak */
+    margin: 0 auto; /* Ortalamak için margin ayarla */
+    overflow: hidden; /* Taşmayı engelle */
+    border-radius: 10px; /* Kenarları yuvarlat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+}
+
+.video-container iframe {
+    width: 100%; /* İframe genişliğini kapsayıcıya göre ayarla */
+    height: auto; /* Yüksekliği genişliğe göre orantılı yap */
+}
+
+/* LAST ADDED SECTION AYARLARI */
+
+/* Last Added Section ayarları */
+.last-added-section {
+    background-color: rgb(56, 125, 155, 0.5);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px; /* Padding'i azaltarak yüksekliği düşür */
+    height: auto; /* Yüksekliği içeriğe göre otomatik ayarlamak için */
+    max-width: 100%;
+}
+
+.last-added-item {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    border-right: 2px solid white; /* Dikey beyaz çizgi ekler */
+}
+
+/* Son elemandaki sağ sınırı kaldır */
+.last-added-item:last-child {
+    border-right: none; /* Son öğede sağdaki çizgiyi kaldır */
+}
+
+/* Subcategory Sarı Dikdörtgen Ayarları */
+.subcategory-container {
+    display: inline-block;
+    padding: 4px 8px; /* İçerideki padding'i azaltarak daha kompakt görünüm */
+    background-color: #F2C94C; /* Uyumlu sarı renk */
+    border-radius: 8px; /* Dikdörtgenin köşelerini hafif yuvarlatma */
+    margin-top: 10px;   
+}
+
+/* Başlık, tür ve seviye arasındaki boşlukları azalt */
+.last-added-item h4, .last-added-item p, .subcategory-container {
+    margin-bottom: 2px; /* Elemanlar arasındaki boşluğu azalt */
+}
+
+.subcategory {
+    color: white; /* Yazı rengi beyaz */
+    font-weight: bold;
+    font-size: 0.9em;
+    margin: 0;
+}
+

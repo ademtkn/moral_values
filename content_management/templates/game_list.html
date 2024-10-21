@@ -1,0 +1,9 @@
+<h1>{{ subject.name }} - Games</h1>
+<ul>
+    {% for game in games %}
+    <li>
+        <strong>{{ game.title }}</strong><br>
+        <p>{{ game.description }}</p>
+    </li>
+    {% endfor %}
+</ul>

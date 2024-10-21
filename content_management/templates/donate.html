@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be a Light - Make a Difference</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/donate.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/"><img src="{% static 'images/logo_1.png' %}" alt="Moral Values Logo"></a>
+        </div>
+        <nav>
+            <ul class="left-menu">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'category_list' %}">Categories</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>Be a Light - Make a Difference</h1>
+        <p>Your generosity helps us continue to create valuable resources for character education.</p>
+    </section>
+
+    <!-- Why Donate Section -->
+    <section class="donate-section">
+        <h2>Why Donate?</h2>
+        <p>
+            Your support allows us to reach more educators, parents, and students, providing them with the tools to build a brighter future. Every contribution, big or small, helps us continue our mission.
+        </p>
+    </section>
+
+    <!-- Choose Your Impact Section -->
+    <section class="impact-options">
+        <h2>Choose Your Impact</h2>
+        <div class="impact-option">
+            <h3>$10</h3>
+            <p>Support educational materials for one student.</p>
+        </div>
+        <div class="impact-option">
+            <h3>$25</h3>
+            <p>Provide resources for a classroom.</p>
+        </div>
+        <div class="impact-option">
+            <h3>$50</h3>
+            <p>Fund a workshop for teachers.</p>
+        </div>
+        <div class="impact-option">
+            <h3>$100</h3>
+            <p>Support development of new educational programs.</p>
+        </div>
+    </section>
+
+    <!-- What Our Supporters Say Section -->
+    <section class="supporter-quotes">
+        <h2>What Our Supporters Say</h2>
+        <blockquote>
+            "Thanks to this organization, my classroom has received the resources we needed to make a real difference!"
+        </blockquote>
+        <cite>- Educator, ABC School</cite>
+    </section>
+
+    <!-- Make a Donation Form -->
+    <section class="donation-form">
+        <h2>Make a Donation</h2>
+        <form action="{% url 'process_donation' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="number" name="amount" placeholder="Enter Donation Amount" min="1" required>
+            <button type="submit">Donate Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Moral Values</h3>
+            <p>© 2024 Moral Values. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

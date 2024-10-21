@@ -1,0 +1,118 @@
+.banner {
+    background: url('../images/banner3.jpg') no-repeat center center;
+    background-size: cover;
+}
+.banner {
+    text-align: left; /* Metinleri sola hizala */
+    color: white;
+    padding: 200px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: white;
+    text-align: left; /* Ana başlığı sola hizala */
+}
+
+.banner p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: white;
+    text-align: left; /* Açıklama metnini sola hizala */
+}
+
+.categories-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f7f9fc;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.category-card {
+    background: linear-gradient(135deg, rgb(31, 140, 173) 0%, #33C1FF 100%);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, #33C1FF 0%, #1f8cad 100%);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.category-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.category-card h3 {
+    font-size: 1.4em;
+    color: white;
+    margin: 15px 0;
+}
+
+.category-card p {
+    font-size: 1em;
+    color: #f0f0f0;
+    margin: 0 15px 15px;
+}
+
+.view-more-btn {
+    background-color: #ffffff;
+    color: #1f8cad;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 15px auto;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.view-more-btn:hover {
+    background-color: #1f8cad;
+    color: white;
+}
+
+/* İkonlar ve küçük grafikler */
+.category-card h3::before {
+    content: '🎨'; /* İstediğiniz kategori için uygun bir emoji veya ikon kullanabilirsiniz */
+    display: block;
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}

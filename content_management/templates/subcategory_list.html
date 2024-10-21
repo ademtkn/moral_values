@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category.name }} - Subcategories</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ category.name }} - Subcategories</h1>
+    </header>
+    <main>
+        <section>
+            <ul>
+                {% for subcategory in subcategories %}
+                    <li>{{ subcategory.name }}</li>
+                {% empty %}
+                    <li>No subcategories available.</li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Educational Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>

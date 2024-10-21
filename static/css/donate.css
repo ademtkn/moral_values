@@ -1,0 +1,312 @@
+/* Genel Gövde ve Yazı Stili */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #def5ff; /* Açık mavi arka plan */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Ayarları */
+header {
+    background-color: #243254;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Menü */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1f8cad;
+    border-radius: 5px;
+}
+
+/* Banner */
+.banner {
+    background: url('../images/banner_donate.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: left;
+    color: white;
+    padding: 200px 20px;
+}
+
+.banner h1 {
+    font-size: 2.8em;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Donate Section */
+.donate-section {
+    background: linear-gradient(135deg, #1f8cad, #00b4d8);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.donate-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.donate-section p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.donate-section .donate-btn {
+    background: #243254;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.donate-section .donate-btn:hover {
+    background: #00b4d8;
+}
+
+/* Choose Your Impact */
+.impact-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.impact-option {
+    background: #ffffff;
+    color: #243254;
+    border-radius: 10px;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.impact-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Supporter Quotes */
+.supporter-quotes {
+    background: #ffffff;
+    color: #555;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.supporter-quotes blockquote {
+    font-style: italic;
+    color: #243254;
+    margin: 0;
+}
+
+.supporter-quotes cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Donation Form */
+.donation-form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.donation-form input,
+.donation-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.donation-form button {
+    background: #1f8cad;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.donation-form button:hover {
+    background: #00b4d8;
+}
+
+/* FOLLOW US*/
+
+/* Follow Us Section ayarları */
+.follow-us-section {
+    background-color: rgb(222, 245, 255);
+    display: flex;
+    align-items: center; /* İkon ve metni dikeyde ortala */
+    justify-content: flex-end; /* Sağ tarafa hizalanmış */
+    padding: 0 10px; /* Yüksekliği azaltmak için padding en aza indirildi */
+    margin-right: 10px; /* Sağ kenardan boşluk */
+    margin-bottom: 10px; /* Footer ile boşluk */
+    height: auto; /* Yükseklik otomatik */
+    margin-top: 10px; /* Footer ile boşluk */
+}
+
+/* Follow Us Text Stili */
+.follow-us-text {
+    font-size: 1.2em; /* Yazı boyutunu biraz küçülttük */
+    font-weight: bold; /* Kalın yazı */
+    color: #fff; /* Beyaz renk */
+    margin-right: 15px; /* Metin ile ikonlar arasında daha az boşluk */
+    letter-spacing: 1px; /* Harfler arasındaki boşluğu azalttık */
+    text-transform: uppercase; /* Büyük harflerle dikkat çekici */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Gölge efekti hafifletildi */
+    font-family: 'Roboto', sans-serif; /* Yazı tipi */
+}
+
+/* Follow Us metni altında çizgi efekti */
+.follow-us-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Metnin hemen altına */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+}
+
+/* Sosyal medya ikonları */
+.follow-us-section .social-icon img {
+    width: 30px; /* İkon boyutunu küçülttük (30px) */
+    height: 30px; /* Yükseklik aynı olacak */
+    margin-right: 15px; /* İkonlar arasında daha az boşluk */
+    transition: transform 0.3s ease;
+}
+
+/* İkonların hover efekti */
+.follow-us-section .social-icon:hover img {
+    transform: scale(1.2); /* Hover sırasında ikonları büyüt */
+}
+
+/* FOOTER AYARLARI */
+
+/* Footer Stilleri */
+footer {
+    background-color: #243254; /* Arka plan rengi */
+    color: white; /* Yazı rengi */
+    padding: none;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    font-size: 1.6em; /* Başlık boyutu */
+    margin-bottom: 10px; /* Başlık ile linkler arasında boşluk */
+    font-weight: bold;
+}
+
+.footer-content ul {
+    list-style: none; /* Noktalı listeyi kaldırma */
+    padding: 0;
+    margin: 0 0 10px 0; /* Linklerle alt satır arasında boşluk */
+    display: flex;
+    justify-content: center; /* Linkleri ortalar */
+    gap: 30px; /* Linkler arasında boşluk */
+}
+
+
+.footer-content ul li {
+    display: inline; /* Linkleri yatay dizme */
+}
+
+.footer-content ul li a {
+    color: white; /* Link yazı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldırma */
+    font-size: 1em; /* Linklerin boyutu */
+    transition: color 0.3s ease; /* Hover efekti için geçiş süresi */
+}
+
+.footer-content ul li a:hover {
+    color: #00BFFF; /* Hover efekti - link üzerine gelince renk değişimi */
+}
+
+.footer-content p {
+    font-size: 0,9em; /* Alt satır boyutu */
+    margin-top: 10px; /* Footer metni ile üst kısım arasında boşluk */
+    margin: 0 0 0px 0;  /* Alt satır ile alt çizgi arasında boşluk */
+}
+
+/* WhatsApp Button Style */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Butonun alt kenardan 20px yukarıda olmasını sağlar */
+    right: 20px; /* Sağ kenardan 20px içerde olmasını sağlar */
+    z-index: 1000; /* Butonu sayfadaki diğer elemanların üstünde tutar */
+}
+
+.whatsapp-button img {
+    width: 60px; /* İkonun genişliği */
+    height: 60px; /* İkonun yüksekliği */
+    border-radius: 50%; /* İkonu daire yapar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    transition: transform 0.3s ease; /* Hover efekti için geçiş süresi */
+}
+
+.whatsapp-button img:hover {
+    transform: scale(1.1); /* Hover sırasında butonu büyütür */
+}

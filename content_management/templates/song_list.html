@@ -1,0 +1,9 @@
+<h1>{{ subject.name }} - Songs (MP3)</h1>
+<ul>
+    {% for song in songs %}
+    <li>
+        <strong>{{ song.title }}</strong><br>
+        <a href="{{ song.file.url }}" target="_blank">Şarkıyı Dinle</a>
+    </li>
+    {% endfor %}
+</ul>

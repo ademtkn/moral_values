@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moral Values - Ana Sayfa</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css1/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="/"><img src="{% static 'images/logo_1.png' %}" alt="Moral Values Logo"></a>
+        </div>
+        <nav>
+            <!--  Sol Menüler -->
+            <ul class="left-menu">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'category_list' %}">Categories</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact</a></li>
+            </ul>
+
+             <!-- Sağ Menü (Giriş Kayıt) -->
+            <ul class="right-menu">
+            <li><a href="#" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>Welcome to Moral Values</h1>
+        <p>Your source for character education resources.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-video" style="color: #FF5733;"></i> <!-- Video Icon -->
+                </div>
+                <div class="count" data-target="150">0</div> 
+                <p><h3> Videos</h3></p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-book" style="color: #33C1FF;"></i> <!-- Story Icon -->
+                </div>
+                <div class="count" data-target="100">0</div> 
+                <p><h3> Stories</h3></p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-gamepad" style="color: #28A745;"></i> <!-- Game Icon -->
+                </div>
+                <div class="count" data-target="125">0</div> 
+                <p><h3> Games</h3></p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-file-alt" style="color: #FFC107;"></i> <!-- Document Icon -->
+                </div>
+                <div class="count" data-target="75">0</div> 
+                <p><h3> Documents</h3></p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-music" style="color: #9C27B0;"></i> <!-- Song Icon -->
+                </div>
+                <div class="count" data-target="200">0</div> 
+                <p><h3>Songs</h3></p>
+            </div>
+        </section>
+        
+        <!-- Featured Content Section -->
+        <section class="featured-content">
+            <div class="content-grid">
+                <div class="content-item story-of-the-week">
+                    <h3>Story of the Week</h3>
+                    <div class="icon">📖</div>
+                    <h4>Hikayenin Başlığı</h4>
+                    <p>Hikayenin içeriği burada yazılı olacak...</p>
+                    <a href="#" class="read-more">Devamı</a>
+                </div>
+                <div class="content-item video-of-the-week">
+                    <h3>Video of the Week</h3>
+                    <div class="icon">🎥</div>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gghDRJVxFxU" 
+                                title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="content-item game-of-the-week">
+                    <h3>Game of the Week</h3>
+                    <div class="icon">🎮</div>
+                    <h4>Oyunun Başlığı</h4>
+                    <p>Oyunun içeriği burada yazılı olacak...</p>
+                    <a href="#" class="read-more">Devamı</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Last Added Section -->    
+        <section class="last-added-section">
+            <div class="last-added-item">
+                <h4>Konu Başlığı 1</h4>
+                <p class="content-type">Video</p>
+                <div class="subcategory-container">
+                    <p class="subcategory">Grade 1</p> <!-- Sarı dikdörtgen içine alınacak kısım -->
+                </div>
+            </div>
+            <div class="last-added-item">
+                <h4>Konu Başlığı 2</h4>
+                <p class="content-type">Story</p>
+                <div class="subcategory-container">
+                    <p class="subcategory">Grade 2</p>
+                </div>
+            </div>
+            <div class="last-added-item">
+                <h4>Konu Başlığı 3</h4>
+                <p class="content-type">Game</p>
+                <div class="subcategory-container">
+                    <p class="subcategory">Grade 3</p>
+                </div>
+            </div>
+            <div class="last-added-item">
+                <h4>Konu Başlığı 4</h4>
+                <p class="content-type">Document</p>
+                <div class="subcategory-container">
+                    <p class="subcategory">Grade 4</p>
+                </div>
+            </div>
+            <div class="last-added-item">
+                <h4>Konu Başlığı 5</h4>
+                <p class="content-type">Song</p>
+                <div class="subcategory-container">
+                    <p class="subcategory">Grade 5</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Follow Us Section -->  
+        <section class="follow-us-section">
+            <span class="follow-us-text">Follow Us</span>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram Icon">
+            </a>
+            <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                <img src="{% static 'images/youtube-icon.png' %}" alt="YouTube Icon">
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                <img src="{% static 'images/tiktok-icon.png' %}" alt="TikTok Icon">
+            </a>
+        </section>
+        
+    </main>
+    
+    <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
+        <img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp">
+    </a>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Moral Values</h3> <!-- Başlık -->
+            <ul class="footer-links">
+                <li><a href="/terms-of-use/">Terms of use</a></li>
+                <li><a href="/privacy-policy/">Privacy policy</a></li>
+                <li><a href="/about-us/">About us</a></li>
+                <li><a href="/contact-us/">Contact us</a></li>
+            </ul>
+            <p>© 2024 Moral Values. All rights reserved.</p> <!-- Alt satır -->
+        </div>
+    </footer>
+
+    <script>
+        // Sayfa yüklendiğinde çalışacak fonksiyon
+        window.onscroll = function() {
+            var header = document.querySelector("header");
+            if (window.pageYOffset > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        };
+    </script>
+    <script src="{% static 'js/animations.js' %}"></script>
+</body>
+</html>

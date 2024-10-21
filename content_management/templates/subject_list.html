@@ -1,0 +1,9 @@
+<h1>{{ subcategory.name }} İçerikleri</h1>
+
+<ul>
+    {% for subject in subjects %}
+        <li><a href="{% url 'content_list' subject.id %}">{{ subject.name }}</a></li>
+    {% empty %}
+        <li>Hiç konu bulunamadı.</li>
+    {% endfor %}
+</ul>

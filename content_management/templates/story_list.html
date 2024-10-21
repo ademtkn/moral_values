@@ -1,0 +1,6 @@
+<h1>{{ subject.name }} - Stories</h1>
+<ul>
+    {% for story in stories %}
+    <li>{{ story.title }} - {{ story.description }}</li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,9 @@
+<h1>{{ subject.name }} - Resources</h1>
+<ul>
+    {% for resource in resources %}
+    <li>
+        <strong>{{ resource.title }}</strong><br>
+        <a href="{{ resource.file.url }}" target="_blank">{{ resource.get_file_type_display }} İndir</a>
+    </li>
+    {% endfor %}
+</ul>

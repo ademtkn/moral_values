@@ -1,0 +1,238 @@
+/* Genel gövde ve yazı stili */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #def5ff; /* Sitenin genel arka plan rengi */
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: transparent; /* Başlangıçta şeffaf */
+    height: 60px;
+    display: flex;
+    justify-content: center; /* Logo ve menüyü ortalıyoruz */
+    align-items: center;
+    padding: 0 20px;
+    position: fixed; /* Header sabit */
+    width: 100%; /* Tam genişlik */
+    max-width: 1300px; /* Header'ın genişliğini sınırla */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* Header'ın her şeyin üstünde görünmesini sağlıyor */
+    margin: 0 auto; /* Ortalamak için */
+    box-shadow: none; /* Header'a gölge eklenmiyor */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Geçiş efektleri */
+    border-bottom-left-radius: 10px; /* Header alt köşeleri yuvarlanıyor */
+    border-bottom-right-radius: 10px;
+}
+
+
+.scrolled {
+    background-color: #243254; /* Aşağı kaydırıldığında koyulaşır */
+}
+
+header .logo {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+header .logo img {
+    height: 40px; /* Logo yüksekliğini artırın */
+    width: auto; /* Orantıyı korumak için genişliği otomatik ayarla */
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: space-between; /* Menüleri sola ve sağa hizalar */
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul.left-menu {
+    display: flex; /* Menüyü yatay hale getirir */
+    gap: 20px;
+}
+
+nav ul.left-menu li {
+    margin: 0;
+}
+
+nav ul.left-menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: block;
+}
+
+nav ul.left-menu li a:hover {
+    background-color: #33C1FF;
+    border-radius: 4px;
+}
+
+nav ul.left-menu li a, nav ul.right-menu li a {
+    font-size: 18px; /* Menü yazı boyutunu artırın */
+    padding: 10px 15px; /* Menü öğeleri arasındaki boşlukları artırın */
+}
+
+nav ul.right-menu {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul.right-menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #33C1FF;
+    border-radius: 4px;
+}
+
+/* FOLLOW US*/
+
+/* Follow Us Section ayarları */
+.follow-us-section {
+    background-color: rgb(222, 245, 255);
+    display: flex;
+    align-items: center; /* İkon ve metni dikeyde ortala */
+    justify-content: flex-end; /* Sağ tarafa hizalanmış */
+    padding: 0 10px; /* Yüksekliği azaltmak için padding en aza indirildi */
+    margin-right: 10px; /* Sağ kenardan boşluk */
+    margin-bottom: 10px; /* Footer ile boşluk */
+    height: auto; /* Yükseklik otomatik */
+    margin-top: 10px; /* Footer ile boşluk */
+}
+
+/* Follow Us Text Stili */
+.follow-us-text {
+    font-size: 1.2em; /* Yazı boyutunu biraz küçülttük */
+    font-weight: bold; /* Kalın yazı */
+    color: #fff; /* Beyaz renk */
+    margin-right: 15px; /* Metin ile ikonlar arasında daha az boşluk */
+    letter-spacing: 1px; /* Harfler arasındaki boşluğu azalttık */
+    text-transform: uppercase; /* Büyük harflerle dikkat çekici */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Gölge efekti hafifletildi */
+    font-family: 'Roboto', sans-serif; /* Yazı tipi */
+}
+
+/* Follow Us metni altında çizgi efekti */
+.follow-us-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Metnin hemen altına */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+}
+
+/* Sosyal medya ikonları */
+.follow-us-section .social-icon img {
+    width: 30px; /* İkon boyutunu küçülttük (30px) */
+    height: 30px; /* Yükseklik aynı olacak */
+    margin-right: 15px; /* İkonlar arasında daha az boşluk */
+    transition: transform 0.3s ease;
+}
+
+/* İkonların hover efekti */
+.follow-us-section .social-icon:hover img {
+    transform: scale(1.2); /* Hover sırasında ikonları büyüt */
+}
+
+/* FOOTER AYARLARI */
+
+/* Footer Stilleri */
+footer {
+    background-color: #243254; /* Arka plan rengi */
+    color: white; /* Yazı rengi */
+    padding: none;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    font-size: 1.6em; /* Başlık boyutu */
+    margin-bottom: 10px; /* Başlık ile linkler arasında boşluk */
+    font-weight: bold;
+}
+
+.footer-content ul {
+    list-style: none; /* Noktalı listeyi kaldırma */
+    padding: 0;
+    margin: 0 0 10px 0; /* Linklerle alt satır arasında boşluk */
+    display: flex;
+    justify-content: center; /* Linkleri ortalar */
+    gap: 30px; /* Linkler arasında boşluk */
+}
+
+
+.footer-content ul li {
+    display: inline; /* Linkleri yatay dizme */
+}
+
+.footer-content ul li a {
+    color: white; /* Link yazı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldırma */
+    font-size: 1em; /* Linklerin boyutu */
+    transition: color 0.3s ease; /* Hover efekti için geçiş süresi */
+}
+
+.footer-content ul li a:hover {
+    color: #00BFFF; /* Hover efekti - link üzerine gelince renk değişimi */
+}
+
+.footer-content p {
+    font-size: 0,9em; /* Alt satır boyutu */
+    margin-top: 10px; /* Footer metni ile üst kısım arasında boşluk */
+    margin: 0 0 0px 0;  /* Alt satır ile alt çizgi arasında boşluk */
+}
+
+/* WhatsApp Button Style */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Butonun alt kenardan 20px yukarıda olmasını sağlar */
+    right: 20px; /* Sağ kenardan 20px içerde olmasını sağlar */
+    z-index: 1000; /* Butonu sayfadaki diğer elemanların üstünde tutar */
+}
+
+.whatsapp-button img {
+    width: 60px; /* İkonun genişliği */
+    height: 60px; /* İkonun yüksekliği */
+    border-radius: 50%; /* İkonu daire yapar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+    transition: transform 0.3s ease; /* Hover efekti için geçiş süresi */
+}
+
+.whatsapp-button img:hover {
+    transform: scale(1.1); /* Hover sırasında butonu büyütür */
+}
+
+
+/* Donate */
+
+.donate-section {
+    padding: 60px 20px;
+    background: #e0f7fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
