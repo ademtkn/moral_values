@@ -1,12 +1,11 @@
-
-/* Banner */
-
+/* Contact Background */
 .contact-background {
     background: linear-gradient(to bottom, #007DFE, #ffffff);
     min-height: 100vh; /* Sayfanın tamamını kaplamak için */
     padding: 20px; /* İçerik için biraz boşluk */
 }
 
+/* BANNER */
 .banner {
     background: none;
     background-size: cover;
@@ -14,6 +13,20 @@
     color: white;
     padding: 100px 20px;
     margin-top: 60px; /* Header yüksekliği kadar boşluk bırak */
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banner h1 {
+    font-size: 3em; /* İstediğiniz boyuta göre değeri artırabilirsiniz */
+    font-weight: bold; /* Daha kalın yazı stili için */
+    color: #ffffff; /* Yazı rengini beyaz yaptık */
+    text-align: center; /* Ortalamak için */
+    margin-top: 20px; /* Üstten boşluk eklemek için */
 }
 
 /* Contact Section */
@@ -89,9 +102,68 @@
 }
 
 /* Responsive tasarım */
-@media (max-width: 768px) {
+/* Mobil cihazlar için (480px ve daha küçük ekranlar) */
+@media only screen and (max-width: 480px) {
+    .banner h1 {
+        font-size: 1.5em; /* Mobil cihazlarda başlık boyutunu küçültür */
+    }
+
     .contact-section {
-        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .contact-form h2, .donate-section h2 {
+        font-size: 1.5em;
     }
 }
 
+/* Tablet cihazlar için (481px - 768px arası) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .banner h1 {
+        font-size: 2em; /* Tabletlerde başlık boyutunu ayarlar */
+    }
+
+    .contact-section {
+        padding: 30px;
+    }
+
+    .contact-form h2, .donate-section h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* Masaüstü cihazlar için (769px ve daha büyük ekranlar) */
+@media only screen and (min-width: 769px) {
+    .banner h1 {
+        font-size: 3em; /* Büyük ekranlarda başlık boyutunu ayarlar */
+    }
+
+    .contact-section {
+        padding: 40px;
+    }
+
+    .contact-form h2, .donate-section h2 {
+        font-size: 2em;
+    }
+}
+
+/* Duyarlı görseller */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Flexbox düzenlemeleri */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item {
+    flex: 1 1 300px;
+    margin: 10px;
+    text-align: center;
+}

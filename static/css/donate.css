@@ -96,11 +96,12 @@ nav ul li a:hover {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .donate-section .donate-btn:hover {
     background: #00b4d8;
+    transform: scale(1.05);
 }
 
 /* Choose Your Impact */
@@ -188,65 +189,47 @@ nav ul li a:hover {
     background: #00b4d8;
 }
 
-/* FOLLOW US*/
-
-/* Follow Us Section ayarları */
+/* FOLLOW US */
 .follow-us-section {
     background-color: rgb(222, 245, 255);
     display: flex;
-    align-items: center; /* İkon ve metni dikeyde ortala */
-    justify-content: flex-end; /* Sağ tarafa hizalanmış */
-    padding: 0 10px; /* Yüksekliği azaltmak için padding en aza indirildi */
-    margin-right: 10px; /* Sağ kenardan boşluk */
-    margin-bottom: 10px; /* Footer ile boşluk */
-    height: auto; /* Yükseklik otomatik */
-    margin-top: 10px; /* Footer ile boşluk */
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: auto;
+    margin-top: 10px;
 }
 
-/* Follow Us Text Stili */
 .follow-us-text {
-    font-size: 1.2em; /* Yazı boyutunu biraz küçülttük */
-    font-weight: bold; /* Kalın yazı */
-    color: #fff; /* Beyaz renk */
-    margin-right: 15px; /* Metin ile ikonlar arasında daha az boşluk */
-    letter-spacing: 1px; /* Harfler arasındaki boşluğu azalttık */
-    text-transform: uppercase; /* Büyük harflerle dikkat çekici */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Gölge efekti hafifletildi */
-    font-family: 'Roboto', sans-serif; /* Yazı tipi */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Follow Us metni altında çizgi efekti */
-.follow-us-text::after {
-    content: '';
-    position: absolute;
-    bottom: -5px; /* Metnin hemen altına */
-    left: 0;
-    width: 100%;
-    height: 3px;
-    border-radius: 2px;
-}
-
-/* Sosyal medya ikonları */
 .follow-us-section .social-icon img {
-    width: 30px; /* İkon boyutunu küçülttük (30px) */
-    height: 30px; /* Yükseklik aynı olacak */
-    margin-right: 15px; /* İkonlar arasında daha az boşluk */
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
     transition: transform 0.3s ease;
 }
 
-/* İkonların hover efekti */
 .follow-us-section .social-icon:hover img {
-    transform: scale(1.2); /* Hover sırasında ikonları büyüt */
+    transform: scale(1.2);
 }
 
 /* FOOTER AYARLARI */
-
-/* Footer Stilleri */
 footer {
-    background-color: #243254; /* Arka plan rengi */
-    color: white; /* Yazı rengi */
-    padding: none;
+    background-color: #243254;
+    color: white;
     text-align: center;
+    padding: 20px 0;
 }
 
 .footer-content {
@@ -255,58 +238,52 @@ footer {
 }
 
 .footer-content h3 {
-    font-size: 1.6em; /* Başlık boyutu */
-    margin-bottom: 10px; /* Başlık ile linkler arasında boşluk */
+    font-size: 1.6em;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
 .footer-content ul {
-    list-style: none; /* Noktalı listeyi kaldırma */
-    padding: 0;
-    margin: 0 0 10px 0; /* Linklerle alt satır arasında boşluk */
+    list-style: none;
     display: flex;
-    justify-content: center; /* Linkleri ortalar */
-    gap: 30px; /* Linkler arasında boşluk */
-}
-
-
-.footer-content ul li {
-    display: inline; /* Linkleri yatay dizme */
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-content ul li a {
-    color: white; /* Link yazı rengi */
-    text-decoration: none; /* Alt çizgiyi kaldırma */
-    font-size: 1em; /* Linklerin boyutu */
-    transition: color 0.3s ease; /* Hover efekti için geçiş süresi */
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
 }
 
 .footer-content ul li a:hover {
-    color: #00BFFF; /* Hover efekti - link üzerine gelince renk değişimi */
+    color: #00BFFF;
 }
 
 .footer-content p {
-    font-size: 0,9em; /* Alt satır boyutu */
-    margin-top: 10px; /* Footer metni ile üst kısım arasında boşluk */
-    margin: 0 0 0px 0;  /* Alt satır ile alt çizgi arasında boşluk */
+    font-size: 0.9em;
+    margin-top: 10px;
 }
 
-/* WhatsApp Button Style */
+/* WhatsApp Button */
 .whatsapp-button {
     position: fixed;
-    bottom: 20px; /* Butonun alt kenardan 20px yukarıda olmasını sağlar */
-    right: 20px; /* Sağ kenardan 20px içerde olmasını sağlar */
-    z-index: 1000; /* Butonu sayfadaki diğer elemanların üstünde tutar */
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 .whatsapp-button img {
-    width: 60px; /* İkonun genişliği */
-    height: 60px; /* İkonun yüksekliği */
-    border-radius: 50%; /* İkonu daire yapar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
-    transition: transform 0.3s ease; /* Hover efekti için geçiş süresi */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .whatsapp-button img:hover {
-    transform: scale(1.1); /* Hover sırasında butonu büyütür */
+    transform: scale(1.1);
 }
