@@ -1,9 +1,16 @@
 
 /* Banner */
+
+.contact-background {
+    background: linear-gradient(to bottom, #007DFE, #ffffff);
+    min-height: 100vh; /* Sayfanın tamamını kaplamak için */
+    padding: 20px; /* İçerik için biraz boşluk */
+}
+
 .banner {
-    background: url('../images/contact_banner.jpg') no-repeat center center;
+    background: none;
     background-size: cover;
-    text-align: left;
+    text-align: center;
     color: white;
     padding: 100px 20px;
     margin-top: 60px; /* Header yüksekliği kadar boşluk bırak */

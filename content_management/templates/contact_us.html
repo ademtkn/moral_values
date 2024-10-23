@@ -14,82 +14,83 @@
 
 
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <a href="/"><img src="{% static 'images/logo_1.png' %}" alt="Moral Values Logo"></a>
-        </div>
-        <nav>
-            <!--  Sol Menüler -->
-            <ul class="left-menu">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'category_list' %}">Categories</a></li>
-                <li><a href="{% url 'about_us' %}">About Us</a></li>
-                <li><a href="{% url 'contact_us' %}">Contact</a></li>
-            </ul>
+    <div class="contact-background">
+            <!-- Header -->
+        <header>
+            <div class="logo">
+                <a href="/"><img src="{% static 'images/logo_1.png' %}" alt="Moral Values Logo"></a>
+            </div>
+            <nav>
+                <!--  Sol Menüler -->
+                <ul class="left-menu">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'category_list' %}">Categories</a></li>
+                    <li><a href="{% url 'about_us' %}">About Us</a></li>
+                    <li><a href="{% url 'contact_us' %}">Contact</a></li>
+                </ul>
+    
+                 <!-- Sağ Menü (Giriş Kayıt) -->
+                <ul class="right-menu">
+                <li><a href="#" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </header>
 
-             <!-- Sağ Menü (Giriş Kayıt) -->
-            <ul class="right-menu">
-            <li><a href="#" class="login-btn">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-
-        <!-- Banner Section -->
+            <!-- Banner Section -->
         <section class="banner">
             <h1>Welcome to Moral Values</h1>
         </section>
-   
-        <!-- Main Content -->
-    <main>
-        <section class="contact-section">
-            <div class="contact-form">
-                <h2>Get in Touch</h2>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
 
-            <div class="donate-section">
-                <h2>Support Our Mission</h2>
-                <p>If you'd like to support our educational platform, consider making a donation. Every contribution helps us provide better resources to students and educators.</p>
-                <a href="{% url 'donate' %}" class="donate-btn">Donate Now</a>
-            </div>
-        </section>
+            <!-- Main Content -->
+        <main>
+            <section class="contact-section">
+                <div class="contact-form">
+                    <h2>Get in Touch</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+    
+                <div class="donate-section">
+                    <h2>Support Our Mission</h2>
+                    <p>If you'd like to support our educational platform, consider making a donation. Every contribution helps us provide better resources to students and educators.</p>
+                    <a href="{% url 'donate' %}" class="donate-btn">Donate Now</a>
+                </div>
+            </section>
+    
+             <!-- Follow Us Section --> 
+            <section class="follow-us-section">
+                <span class="follow-us-text">Follow Us</span>
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                            <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram Icon">
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                            <img src="{% static 'images/youtube-icon.png' %}" alt="YouTube Icon">
+                        </a>
+                        <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                            <img src="{% static 'images/tiktok-icon.png' %}" alt="TikTok Icon">
+                        </a>
+            </section>
+        </main>
 
-         <!-- Follow Us Section --> 
-        <section class="follow-us-section">
-            <span class="follow-us-text">Follow Us</span>
-                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                        <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram Icon">
-                    </a>
-                    <a href="https://www.youtube.com" target="_blank" class="social-icon">
-                        <img src="{% static 'images/youtube-icon.png' %}" alt="YouTube Icon">
-                    </a>
-                    <a href="https://www.tiktok.com" target="_blank" class="social-icon">
-                        <img src="{% static 'images/tiktok-icon.png' %}" alt="TikTok Icon">
-                    </a>
-        </section>
-    </main>
+             <!-- whatsapp -->
+        <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
+            <img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp">
+        </a>
 
-    </main>
-
-    <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
-        <img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp">
-    </a>
-        <!-- Footer -->
+             <!-- Footer -->
         <footer>
             <div class="footer-content">
                 <h3>Moral Values</h3> <!-- Başlık -->
@@ -102,7 +103,7 @@
                 <p>© 2024 Moral Values. All rights reserved.</p> <!-- Alt satır -->
             </div>
         </footer>
-    
+
         <script>
             // Scroll effect for header background
             window.onscroll = function() {
@@ -114,6 +115,8 @@
                 }
             };
         </script>
+
+    </div>
 
 </body>
 </html>
