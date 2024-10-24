@@ -10,7 +10,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
 <body>
     <!-- Header -->
@@ -20,7 +19,13 @@
             <img src="{% static 'images/logo_1.png' %}" alt="Moral Values">
         </a>
         <nav>
-            <!--  Sol Menüler -->
+            <!-- Menü Butonu (Mobil) -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- Sol Menüler -->
             <ul class="left-menu">
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'category_list' %}">Categories</a></li>
@@ -28,9 +33,9 @@
                 <li><a href="{% url 'contact_us' %}">Contact</a></li>
             </ul>
 
-             <!-- Sağ Menü (Giriş Kayıt) -->
+            <!-- Sağ Menü (Giriş Kayıt) -->
             <ul class="right-menu">
-            <li><a href="#" class="login-btn">Login</a></li>
+                <li><a href="#" class="login-btn">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -118,7 +123,7 @@
                 <h4>Konu Başlığı 1</h4>
                 <p class="content-type">Video</p>
                 <div class="subcategory-container">
-                    <p class="subcategory">Grade 1</p> <!-- Sarı dikdörtgen içine alınacak kısım -->
+                    <p class="subcategory">Grade 1</p>
                 </div>
             </div>
             <div class="last-added-item">
@@ -175,14 +180,14 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <h3>Moral Values</h3> <!-- Başlık -->
+            <h3>Moral Values</h3>
             <ul class="footer-links">
                 <li><a href="/terms-of-use/">Terms of use</a></li>
                 <li><a href="/privacy-policy/">Privacy policy</a></li>
                 <li><a href="/about-us/">About us</a></li>
                 <li><a href="/contact-us/">Contact us</a></li>
             </ul>
-            <p>© 2024 Moral Values. All rights reserved.</p> <!-- Alt satır -->
+            <p>© 2024 Moral Values. All rights reserved.</p>
         </div>
     </footer>
 

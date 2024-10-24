@@ -16,6 +16,12 @@
             <img src="{% static 'images/logo_1.png' %}" alt="Moral Values">
         </a>
         <nav>
+            <!-- Menü Butonu (Mobil) -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul class="left-menu">
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'category_list' %}">Categories</a></li>
@@ -88,5 +94,19 @@
             <p>© 2024 Moral Values. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Scroll effect for header background
+        window.onscroll = function() {
+            var header = document.querySelector("header");
+            if (window.pageYOffset > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        };
+    </script>
+
+    <script src="{% static 'js/animations.js' %}"></script>
 </body>
 </html>

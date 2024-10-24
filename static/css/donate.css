@@ -189,7 +189,7 @@ nav ul li a:hover {
     background: #00b4d8;
 }
 
-/* FOLLOW US */
+/* Follow Us Section */
 .follow-us-section {
     background-color: rgb(222, 245, 255);
     display: flex;
@@ -224,7 +224,7 @@ nav ul li a:hover {
     transform: scale(1.2);
 }
 
-/* FOOTER AYARLARI */
+/* FOOTER */
 footer {
     background-color: #243254;
     color: white;
@@ -286,4 +286,47 @@ footer {
 
 .whatsapp-button img:hover {
     transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 480px) {
+    .banner h1 {
+        font-size: 1.5em;
+    }
+
+    .donate-section {
+        padding: 20px;
+    }
+
+    .impact-option {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .banner h1 {
+        font-size: 2em;
+    }
+
+    .donate-section {
+        padding: 40px;
+    }
+
+    .impact-option {
+        width: calc(50% - 20px);
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .banner h1 {
+        font-size: 2.8em;
+    }
+
+    .donate-section {
+        padding: 60px;
+    }
+
+    .impact-option {
+        width: 150px;
+    }
 }

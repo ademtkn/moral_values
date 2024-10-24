@@ -103,13 +103,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-window.onscroll = function() {
-    var header = document.querySelector("header");
-    if (window.pageYOffset > 50) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-};
+// Mobil menü için toggle işlemi
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
 
-
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
+    });
+});

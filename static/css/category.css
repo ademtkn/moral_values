@@ -134,6 +134,11 @@
     .category-card p {
         font-size: 0.9em;
     }
+
+    .view-more-btn {
+        padding: 10px 16px;
+        font-size: 0.9em;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -150,6 +155,11 @@
     }
 
     .category-card p {
+        font-size: 1em;
+    }
+
+    .view-more-btn {
+        padding: 11px 18px;
         font-size: 1em;
     }
 }

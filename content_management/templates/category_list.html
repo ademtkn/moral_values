@@ -13,14 +13,22 @@
 </head>
 
 <body>
+    <!-- Logo -->
+    <a href="/" class="fixed-logo">
+        <img src="{% static 'images/logo_1.png' %}" alt="Moral Values">
+    </a>
+
     <!-- Header -->
     <header>
-        <!-- Logo -->
-        <a href="/" class="fixed-logo">
-            <img src="{% static 'images/logo_1.png' %}" alt="Moral Values">
-        </a>
         <nav>
-            <!--  Sol Menüler -->
+            <!-- Menü Butonu (Mobil) -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Sol Menüler -->
             <ul class="left-menu">
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'category_list' %}">Categories</a></li>
@@ -28,9 +36,9 @@
                 <li><a href="{% url 'contact_us' %}">Contact</a></li>
             </ul>
 
-             <!-- Sağ Menü (Giriş Kayıt) -->
+            <!-- Sağ Menü (Giriş Kayıt) -->
             <ul class="right-menu">
-            <li><a href="#" class="login-btn">Login</a></li>
+                <li><a href="{% url 'login' %}" class="login-btn">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -43,8 +51,8 @@
    
     <!-- Main Content -->
     <main>
-         <!-- Categories Section -->
-         <section class="categories-section">
+        <!-- Categories Section -->
+        <section class="categories-section">
             <h1>Schools</h1>
             <div class="categories-grid">
                 <div class="category-card">
@@ -82,51 +90,41 @@
             </div>
         </section>
         
-        
-                <!-- Follow Us Section -->  
-                <section class="follow-us-section">
-                    <span class="follow-us-text">Follow Us</span>
-                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                        <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram Icon">
-                    </a>
-                    <a href="https://www.youtube.com" target="_blank" class="social-icon">
-                        <img src="{% static 'images/youtube-icon.png' %}" alt="YouTube Icon">
-                    </a>
-                    <a href="https://www.tiktok.com" target="_blank" class="social-icon">
-                        <img src="{% static 'images/tiktok-icon.png' %}" alt="TikTok Icon">
-                    </a>
-                </section>
+        <!-- Follow Us Section -->  
+        <section class="follow-us-section">
+            <span class="follow-us-text">Follow Us</span>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram Icon">
+            </a>
+            <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                <img src="{% static 'images/youtube-icon.png' %}" alt="YouTube Icon">
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                <img src="{% static 'images/tiktok-icon.png' %}" alt="TikTok Icon">
+            </a>
+        </section>
     </main>
 
+    <!-- WhatsApp Button -->
     <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
         <img src="{% static 'images/whatsapp-icon.png' %}" alt="WhatsApp">
     </a>
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <h3>Moral Values</h3> <!-- Başlık -->
-                <ul class="footer-links">
-                    <li><a href="/terms-of-use/">Terms of use</a></li>
-                    <li><a href="/privacy-policy/">Privacy policy</a></li>
-                    <li><a href="/about-us/">About us</a></li>
-                    <li><a href="/contact-us/">Contact us</a></li>
-                </ul>
-                <p>© 2024 Moral Values. All rights reserved.</p> <!-- Alt satır -->
-            </div>
-        </footer>
-    
-        <script>
-            // Sayfa yüklendiğinde çalışacak fonksiyon
-            window.onscroll = function() {
-                var header = document.querySelector("header");
-                if (window.pageYOffset > 50) {
-                    header.classList.add("scrolled");
-                } else {
-                    header.classList.remove("scrolled");
-                }
-            };
-        </script>
 
-        <script src="{% static 'js/animations.js' %}"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Moral Values</h3>
+            <ul class="footer-links">
+                <li><a href="/terms-of-use/">Terms of Use</a></li>
+                <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="/about-us/">About Us</a></li>
+                <li><a href="/contact-us/">Contact Us</a></li>
+            </ul>
+            <p>© 2024 Moral Values. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript dosyasını dahil etmek -->
+    <script src="{% static 'js/animations.js' %}"></script>
 </body>
 </html>

@@ -11,17 +11,23 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-
 <body>
-        <!-- Logo -->
-        <a href="/" class="fixed-logo">
-            <img src="{% static 'images/logo_1.png' %}" alt="Moral Values">
-        </a>
+    <!-- Logo -->
+    <a href="/" class="fixed-logo">
+        <img src="{% static 'images/logo_1.png' %}" alt="Moral Values">
+    </a>
 
     <!-- Header -->
     <header>
         <nav>
-            <!--  Sol Menüler -->
+            <!-- Menü Butonu (Mobil) -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <!-- Sol Menüler -->
             <ul class="left-menu">
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'category_list' %}">Categories</a></li>
@@ -53,111 +59,23 @@
                 <img src="{% static 'images/introduction_image.jpg' %}" class="intro-image" alt="Introduction Image">
             </div>
         </section>
-
-        <section class="fade-in-section vision-mission">
-            <h2>Vision & Mission</h2>
-            <div class="vision">
-                <h3>Our Vision</h3>
-                <p>
-                    Our vision is to build a world where values such as honesty, empathy, and responsibility are at the core of every individual’s life. We aim to create a future where character education is embraced by everyone, leading to a peaceful, happy, and environmentally conscious society.
-                </p>
-            </div>
-            <div class="mission">
-                <h3>Our Mission</h3>
-                <p>
-                    Our mission is to provide easy access to well-prepared, high-quality educational materials that promote character development. We believe that these values are crucial for everyone, from the youngest learners to adults, and should be nurtured in every aspect of life. We are committed to supporting educators and parents in their efforts to instill these values, helping build a cleaner, more respectful, and brighter future for all.
-                </p>
-            </div>
-        </section>
-
-        <section class="our-story">
-            <h2>Our Story</h2>
-            <p>
-                Our story began in 2019 when two passionate educators came together with a shared dream: to bring years of experience in Character Education into a platform accessible to everyone. Inspired by our students' growth and the positive impact of character education, we realized that these resources should not be limited to classrooms alone.
-            </p>
-            <p>
-                What started as a small initiative has grown into a rich platform that welcomes contributions from volunteer experts in various fields. Each day, our community of like-minded individuals continues to expand, allowing us to reach more people and offer even richer content. We believe that everyone deserves the opportunity to learn and practice these values, whether at home, in school, or within their communities.
-            </p>
-            <p>
-                Our belief is simple: by fostering values like respect, empathy, and responsibility, we can contribute to building a peaceful, happy, and sustainable world. We believe that every individual has a role to play in shaping this future, and we are here to support that journey with open hearts and carefully curated resources. Join us, and let's build a brighter tomorrow together.
-            </p>
-        </section>
-        <section class="meet-the-team">
-            <h2>Meet the Team</h2>
-            <div class="team-container">
-                <div class="team-member">
-                    <img src="{% static 'images/founder1.jpg' %}" alt="Founder 1">
-                    <h3>John Doe</h3>
-                    <p>Co-Founder & Project Manager</p>
-                    <p class="bio">
-                        John has over 10 years of experience in educational management and is passionate about creating accessible learning resources for everyone.
-                    </p>
-                    <p>Email: john.doe@example.com</p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/founder2.jpg' %}" alt="Founder 2">
-                    <h3>Jane Smith</h3>
-                    <p>Co-Founder & Web Developer</p>
-                    <p class="bio">
-                        Jane is a skilled web developer with a background in frontend and backend development, ensuring our platform is user-friendly and effective.
-                    </p>
-                    <p>Email: jane.smith@example.com</p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/founder3.jpg' %}" alt="Founder 3">
-                    <h3>Emily Brown</h3>
-                    <p>Content Manager & Editor</p>
-                    <p class="bio">
-                        Emily leads our content creation team, focusing on crafting meaningful educational materials and ensuring high-quality standards.
-                    </p>
-                    <p>Email: emily.brown@example.com</p>
-                </div>
-                <div class="team-member">
-                    <img src="{% static 'images/founder4.jpg' %}" alt="Founder 4">
-                    <h3>Michael Green</h3>
-                    <p>Marketing & Promotion Manager</p>
-                    <p class="bio">
-                        Michael is in charge of our marketing and promotion strategies, ensuring that our mission reaches learners around the world.
-                    </p>
-                    <p>Email: michael.green@example.com</p>
-                </div>
-            </div>
-        </section>        
-
-        <section class="values">
-            <h2>Our Core Values</h2>
-            <ul>
-                <li>Empathy</li>
-                <li>Respect</li>
-                <li>Responsibility</li>
-                <li>Integrity</li>
-                <li>Kindness</li>
-            </ul>
-        </section>
-
-        <section class="support-us">
-            <h2>Support Us</h2>
-            <p>
-                Our mission thrives on the support and collaboration of passionate individuals and organizations. If you share our vision and would like to contribute, we welcome you to join us. Your support helps us continue to expand and enrich our platform, reaching more learners and educators worldwide.
-            </p>
-            <a href="{% url 'donate' %}" class="donate-btn">Donate Now</a>
-        </section>
-                <!-- Follow Us Section -->  
         
+        <!-- Diğer içerikler burada devam ediyor -->
+
     </main>
     <!-- Follow Us bölümünü ana içerikten ayırdık -->
-<section class="follow-us-section">
-    <span class="follow-us-text">Follow Us</span>
-    <a href="https://www.instagram.com" target="_blank" class="social-icon">
-        <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram Icon">
-    </a>
-    <a href="https://www.youtube.com" target="_blank" class="social-icon">
-        <img src="{% static 'images/youtube-icon.png' %}" alt="YouTube Icon">
-    </a>
-    <a href="https://www.tiktok.com" target="_blank" class="social-icon">
-        <img src="{% static 'images/tiktok-icon.png' %}" alt="TikTok Icon">
-    </a>
-</section>
+    <section class="follow-us-section">
+        <span class="follow-us-text">Follow Us</span>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+            <img src="{% static 'images/instagram-icon.png' %}" alt="Instagram Icon">
+        </a>
+        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+            <img src="{% static 'images/youtube-icon.png' %}" alt="YouTube Icon">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+            <img src="{% static 'images/tiktok-icon.png' %}" alt="TikTok Icon">
+        </a>
+    </section>
 
     <!-- Footer -->
     <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
@@ -180,6 +98,5 @@
     <!-- JavaScript dosyasını dahil etmek -->
     <script src="{% static 'js/animations.js' %}"></script>
 
-    
 </body>
 </html>

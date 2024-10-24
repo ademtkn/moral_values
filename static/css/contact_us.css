@@ -101,7 +101,7 @@
     background-color: #218838;
 }
 
-/* Responsive tasarım */
+/* Responsive Design */
 /* Mobil cihazlar için (480px ve daha küçük ekranlar) */
 @media only screen and (max-width: 480px) {
     .banner h1 {
@@ -167,3 +167,38 @@ img {
     margin: 10px;
     text-align: center;
 }
+
+/* Fixed Logo ve Menüler için Mobil Uyumluluk */
+.fixed-logo {
+    position: fixed; /* Sayfada sabit konumda kalmasını sağlar */
+    top: 5px; /* Yukarıdan uzaklığı */
+    left: 20px; /* Soldan uzaklığı */
+    z-index: 1000; /* Diğer öğelerin üstünde görünmesini sağlar */
+    background: rgba(255, 255, 255, 0); /* Şeffaf arka plan */
+    padding: 5px; /* Logonun etrafına hafif bir boşluk ekler */
+    border-radius: 10px; /* Köşeleri yuvarlatır */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekler */
+    transition: transform 0.3s ease; /* Hover sırasında animasyon eklemek için */
+}
+
+.fixed-logo img {
+    width: 70px; /* Logonun genişliği */
+    height: auto; /* Yüksekliği orantılı olarak ayarlanır */
+}
+
+.fixed-logo:hover {
+    transform: scale(1.1); /* Hover sırasında logonun hafifçe büyümesini sağlar */
+}
+
+@media (max-width: 768px) {
+    .fixed-logo {
+        width: 40px; /* Mobilde daha küçük boyutta göster */
+        top: 5px; /* Yukarıdan ve soldan daha az boşluk */
+        left: 10px;
+    }
+    
+    .fixed-logo img {
+        width: 30px; /* Mobilde daha küçük logo */
+    }
+}
+
